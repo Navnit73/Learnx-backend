@@ -20,7 +20,10 @@ app.use(cookieParser());
 app.use(
   cors({
     origin: process.env.FRONTEND_URL,
+    credentials: true,
     methods: ["GET", "POST", "PUT", "DELETE"],
+    exposedHeaders: ["set-cookie", "Authorization", "cookie"],
+    allowedHeaders: ["content-type", "set-cookie", "Authorization", "cookie"],
   })
 );
 
