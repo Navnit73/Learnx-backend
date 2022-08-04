@@ -178,7 +178,7 @@ export const resetPassword = catchAsyncError(async (req, res, next) => {
   });
 
   if (!user)
-    return next(new ErrorHandler("Token is invalid or has been expired"));
+    return next(new ErrorHandler("Token is invalid or has been expired", 401));
 
   user.password = req.body.password;
   user.resetPasswordToken = undefined;
