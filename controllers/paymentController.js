@@ -11,7 +11,7 @@ export const buySubscription = catchAsyncError(async (req, res, next) => {
   if (user.role === "admin")
     return next(new ErrorHandler("Admin can't buy subscription", 400));
 
-  const plan_id = process.env.PLAN_ID || "plan_JuJevKAcuZdtRO";
+  const plan_id = process.env.PLAN_ID || "plan_Nw7YB12miuPvvh";
 
   const subscription = await instance.subscriptions.create({
     plan_id,
