@@ -15,7 +15,7 @@ router.route("/contact").post(contact);
 // Request form
 router.route("/courserequest").post(courseRequest);
 
-// Get Admin Dashboard Stats
+// Get Admin Dashboard 
 router
   .route("/admin/stats")
   .get(isAuthenticated, authorizeAdmin, getDashboardStats);
