@@ -1,5 +1,5 @@
 import mongoose from "mongoose";
-
+//payment
 const schema = new mongoose.Schema({
   razorpay_signature: {
     type: String,
